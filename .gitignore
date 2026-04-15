@@ -1,0 +1,34 @@
+# Obsidian
+.obsidian/workspace
+.obsidian/workspace-mobile
+.obsidian/workspace-desktop
+.obsidian/app.json
+.obsidian/appearance.json
+.obsidian/core.json
+.obsidian/graph.json
+.obsidian/hotkeys.json
+.obsidian/plugins/**
+.obsidian/themes/**
+.obsidian/snippets/**
+.obsidian/types.json
+
+# System files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor files
+.vscode/**
+.idea/**
+*.swp
+*.swo
+*~
+
+# Logs
+*.log
+npm-debug.log*
+
+# Temporary files
+.tmp/
+temp/
+*.tmp

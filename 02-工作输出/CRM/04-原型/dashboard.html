@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>工作台 - CRM 系统</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <div class="app-layout">
+    <!-- 左侧边栏 -->
+    <aside class="sidebar">
+      <div class="sidebar-header">
+        <div class="sidebar-brand">CRM 系统</div>
+      </div>
+
+      <nav class="sidebar-nav">
+        <!-- 工作台 -->
+        <a href="dashboard.html" class="sidebar-menu-item active">
+          <span class="sidebar-menu-icon">📊</span>
+          <span>工作台</span>
+        </a>
+
+        <!-- 销售管理（二级菜单） -->
+        <div class="sidebar-menu-group">
+          <div class="sidebar-menu-item" style="padding-left: 20px; font-weight: 600;">
+            <span class="sidebar-menu-icon">💼</span>
+            <span>销售管理</span>
+          </div>
+          <div class="sidebar-submenu">
+            <a href="leads/list.html" class="sidebar-menu-item active">
+              <span>线索管理</span>
+            </a>
+            <!-- 预留位置，后续扩展 -->
+            <!--
+            <a href="customers/list.html" class="sidebar-menu-item">
+              <span>客户管理</span>
+            </a>
+            <a href="opportunities/list.html" class="sidebar-menu-item">
+              <span>商机管理</span>
+            </a>
+            -->
+          </div>
+        </div>
+
+        <!-- 设置 -->
+        <a href="#" class="sidebar-menu-item" style="margin-top: auto;">
+          <span class="sidebar-menu-icon">⚙️</span>
+          <span>设置</span>
+        </a>
+      </nav>
+
+      <!-- 用户信息 -->
+      <div class="sidebar-user">
+        <div class="user-avatar" title="管理员">管</div>
+        <div class="user-info">
+          <div class="user-name">管理员</div>
+          <div class="user-role">超级管理员</div>
+        </div>
+        <a href="index.html" class="logout-btn" title="退出登录">退出</a>
+      </div>
+    </aside>
+
+    <!-- 主内容区 -->
+    <main class="main-content">
+      <!-- 顶部栏 -->
+      <div class="top-bar">
+        <div class="top-bar-title">工作台</div>
+        <div class="top-bar-actions">
+          <span style="color: var(--text-secondary); font-size: 13px;">2026 年 4 月 13 日 星期一</span>
+        </div>
+      </div>
+
+      <!-- 页面内容 -->
+      <div class="container">
+        <!-- 欢迎语 -->
+        <div class="card" style="margin-bottom: 24px;">
+          <h2 style="font-size: 20px; margin-bottom: 8px;">早上好，管理员！</h2>
+          <p style="color: var(--text-secondary);">今天是你本周的第一天，祝你工作顺利！</p>
+        </div>
+
+        <!-- 统计卡片 -->
+        <div class="stats-grid">
+          <div class="stat-card">
+            <div class="stat-label">总线索数</div>
+            <div class="stat-value">128</div>
+            <div class="stat-change">↑ 12% 较上周</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-label">新建线索</div>
+            <div class="stat-value">23</div>
+            <div class="stat-change">↑ 5% 较上周</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-label">已转换线索</div>
+            <div class="stat-value">18</div>
+            <div class="stat-change">↑ 8% 较上周</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-label">转化率</div>
+            <div class="stat-value">14.1%</div>
+            <div class="stat-change">↑ 2% 较上周</div>
+          </div>
+        </div>
+
+        <!-- 快捷入口 -->
+        <div class="card">
+          <div class="card-header">
+            <h3 class="card-title">快捷入口</h3>
+          </div>
+          <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px;">
+            <a href="leads/create.html" class="card" style="margin-bottom: 0; padding: 20px; text-align: center; border: 1px solid var(--border-color);">
+              <div style="font-size: 32px; margin-bottom: 8px;">📝</div>
+              <div style="font-weight: 500;">新建线索</div>
+            </a>
+            <a href="leads/list.html" class="card" style="margin-bottom: 0; padding: 20px; text-align: center; border: 1px solid var(--border-color);">
+              <div style="font-size: 32px; margin-bottom: 8px;">📋</div>
+              <div style="font-weight: 500;">线索列表</div>
+            </a>
+          </div>
+        </div>
+
+        <!-- 最近线索 -->
+        <div class="card">
+          <div class="card-header">
+            <h3 class="card-title">最近线索</h3>
+            <a href="leads/list.html" style="font-size: 13px;">查看全部 →</a>
+          </div>
+          <div class="table-container">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th>姓名</th>
+                  <th>公司</th>
+                  <th>状态</th>
+                  <th>评级</th>
+                  <th>负责人</th>
+                  <th>创建时间</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><a href="leads/detail.html?id=1">张伟</a></td>
+                  <td>北京科技有限公司</td>
+                  <td><span class="tag tag-primary">新建</span></td>
+                  <td><span class="tag tag-danger">Hot</span></td>
+                  <td>管理员</td>
+                  <td>2026-04-10 09:30</td>
+                </tr>
+                <tr>
+                  <td><a href="leads/detail.html?id=2">李芳</a></td>
+                  <td>上海贸易有限公司</td>
+                  <td><span class="tag tag-default">已联系</span></td>
+                  <td><span class="tag tag-warning">Warm</span></td>
+                  <td>管理员</td>
+                  <td>2026-04-09 14:20</td>
+                </tr>
+                <tr>
+                  <td><a href="leads/detail.html?id=3">王强</a></td>
+                  <td>深圳创新科技有限公司</td>
+                  <td><span class="tag tag-success">有意向</span></td>
+                  <td><span class="tag tag-danger">Hot</span></td>
+                  <td>管理员</td>
+                  <td>2026-04-08 11:15</td>
+                </tr>
+                <tr>
+                  <td><a href="leads/detail.html?id=4">刘敏</a></td>
+                  <td>广州 Enterprise 有限公司</td>
+                  <td><span class="tag tag-warning">已评估</span></td>
+                  <td><span class="tag tag-warning">Warm</span></td>
+                  <td>管理员</td>
+                  <td>2026-04-07 16:45</td>
+                </tr>
+                <tr>
+                  <td><a href="leads/detail.html?id=5">陈杰</a></td>
+                  <td>杭州 TechCorp 公司</td>
+                  <td><span class="tag tag-success">已转换</span></td>
+                  <td><span class="tag tag-danger">Hot</span></td>
+                  <td>管理员</td>
+                  <td>2026-04-06 10:00</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

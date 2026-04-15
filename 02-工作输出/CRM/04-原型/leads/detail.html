@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>线索详情 - CRM 系统</title>
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+  <div class="app-layout">
+    <!-- 左侧边栏 -->
+    <aside class="sidebar">
+      <div class="sidebar-header">
+        <div class="sidebar-brand">CRM 系统</div>
+      </div>
+
+      <nav class="sidebar-nav">
+        <!-- 工作台 -->
+        <a href="../dashboard.html" class="sidebar-menu-item">
+          <span class="sidebar-menu-icon">📊</span>
+          <span>工作台</span>
+        </a>
+
+        <!-- 销售管理（二级菜单） -->
+        <div class="sidebar-menu-group">
+          <div class="sidebar-menu-item" style="padding-left: 20px; font-weight: 600;">
+            <span class="sidebar-menu-icon">💼</span>
+            <span>销售管理</span>
+          </div>
+          <div class="sidebar-submenu">
+            <a href="list.html" class="sidebar-menu-item active">
+              <span>线索管理</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- 设置 -->
+        <a href="#" class="sidebar-menu-item" style="margin-top: auto;">
+          <span class="sidebar-menu-icon">⚙️</span>
+          <span>设置</span>
+        </a>
+      </nav>
+
+      <!-- 用户信息 -->
+      <div class="sidebar-user">
+        <div class="user-avatar" title="管理员">管</div>
+        <div class="user-info">
+          <div class="user-name">管理员</div>
+          <div class="user-role">超级管理员</div>
+        </div>
+        <a href="../index.html" class="logout-btn" title="退出登录">退出</a>
+      </div>
+    </aside>
+
+    <!-- 主内容区 -->
+    <main class="main-content">
+      <!-- 顶部栏 -->
+      <div class="top-bar">
+        <div class="top-bar-title">线索详情</div>
+        <div class="top-bar-actions">
+          <span style="color: var(--text-secondary); font-size: 13px;">2026 年 4 月 13 日 星期一</span>
+        </div>
+      </div>
+
+      <!-- 页面内容 -->
+      <div class="container">
+        <!-- 面包屑 -->
+        <div class="breadcrumb">
+          <a href="../dashboard.html">工作台</a>
+          <span class="breadcrumb-separator">/</span>
+          <span>销售管理</span>
+          <span class="breadcrumb-separator">/</span>
+          <a href="list.html">线索列表</a>
+          <span class="breadcrumb-separator">/</span>
+          <span>线索详情</span>
+        </div>
+
+        <!-- 详情头部 -->
+        <div class="detail-header">
+          <h1 class="detail-title" id="leadName">张伟</h1>
+          <div class="detail-actions">
+            <a href="edit.html?id=1" class="btn btn-default">编辑</a>
+            <button class="btn btn-primary" onclick="handleConvert()">转换</button>
+            <button class="btn btn-default" onclick="handleCopy()">复制</button>
+            <button class="btn btn-danger" onclick="handleDelete()">删除</button>
+          </div>
+        </div>
+
+        <div class="card">
+          <!-- 基本信息 -->
+          <div class="detail-section">
+            <h4 class="detail-section-title">基本信息</h4>
+            <div class="detail-grid">
+              <div class="detail-item">
+                <div class="detail-item-label">姓名</div>
+                <div class="detail-item-value">张伟</div>
+              </div>
+              <div class="detail-item">
+                <div class="detail-item-label">职位</div>
+                <div class="detail-item-value">市场总监</div>
+              </div>
+              <div class="detail-item">
+                <div class="detail-item-label">部门</div>
+                <div class="detail-item-value">市场部</div>
+              </div>
+              <div class="detail-item">
+                <div class="detail-item-label">公司名称</div>
+                <div class="detail-item-value">北京科技有限公司</div>
+              </div>
+              <div class="detail-item">
+                <div class="detail-item-label">所属行业</div>
+                <div class="detail-item-value">科技/互联网</div>
+              </div>
+              <div class="detail-item">
+                <div class="detail-item-label">公司网址</div>
+                <div class="detail-item-value">www.example.com</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 联系方式 -->
+          <div class="detail-section">
+            <h4 class="detail-section-title">联系方式</h4>
+            <div class="detail-grid">
+              <div class="detail-item">
+                <div class="detail-item-label">主要邮箱</div>
+                <div class="detail-item-value">zhang.wei@example.com</div>
+              </div>
+              <div class="detail-item">
+                <div class="detail-item-label">办公电话</div>
+                <div class="detail-item-value">010-88889999</div>
+              </div>
+              <div class="detail-item">
+                <div class="detail-item-label">手机</div>
+                <div class="detail-item-value">13800138001</div>
+              </div>
+              <div class="detail-item">
+                <div class="detail-item-label">地址</div>
+                <div class="detail-item-value">北京市朝阳区科技园 A 座 101 室</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 线索信息 -->
+          <div class="detail-section">
+            <h4 class="detail-section-title">线索信息</h4>
+            <div class="detail-grid">
+              <div class="detail-item">
+                <div class="detail-item-label">线索来源</div>
+                <div class="detail-item-value">网站</div>
+              </div>
+              <div class="detail-item">
+                <div class="detail-item-label">线索状态</div>
+                <div class="detail-item-value"><span class="tag tag-primary">新建</span></div>
+              </div>
+              <div class="detail-item">
+                <div class="detail-item-label">线索评级</div>
+                <div class="detail-item-value"><span class="tag tag-danger">Hot</span></div>
+              </div>
+              <div class="detail-item">
+                <div class="detail-item-label">负责人</div>
+                <div class="detail-item-value">管理员</div>
+              </div>
+              <div class="detail-item">
+                <div class="detail-item-label">创建时间</div>
+                <div class="detail-item-value">2026-04-10 09:30:00</div>
+              </div>
+              <div class="detail-item">
+                <div class="detail-item-label">最后修改</div>
+                <div class="detail-item-value">2026-04-10 09:30:00</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 描述 -->
+          <div class="detail-section">
+            <h4 class="detail-section-title">描述</h4>
+            <div style="padding: 12px; background: #FAFAFA; border-radius: 4px; color: var(--text-secondary);">
+              客户通过官网表单提交咨询，对 CRM 系统有兴趣，需要安排演示。
+            </div>
+          </div>
+
+          <!-- 关联记录 -->
+          <div class="detail-section">
+            <h4 class="detail-section-title">关联记录</h4>
+            <div class="empty-state" style="padding: 40px 20px; background: #FAFAFA; border-radius: 4px;">
+              <div class="empty-state-icon">📭</div>
+              <div class="empty-state-text">暂无关联记录</div>
+              <div style="font-size: 12px; margin-top: 8px; color: var(--text-disabled);">
+                线索转换后将自动创建关联客户、联系人和商机
+              </div>
+            </div>
+          </div>
+
+          <!-- 活动历史 -->
+          <div class="detail-section">
+            <h4 class="detail-section-title">活动历史</h4>
+            <div style="padding: 16px; background: #FAFAFA; border-radius: 4px;">
+              <div style="display: flex; gap: 12px; align-items: flex-start;">
+                <div style="width: 8px; height: 8px; border-radius: 50%; background: var(--primary-color); margin-top: 6px;"></div>
+                <div>
+                  <div style="font-weight: 500;">线索创建</div>
+                  <div style="font-size: 12px; color: var(--text-secondary); margin-top: 4px;">
+                    2026-04-10 09:30:00 - 管理员 创建了此线索
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 返回列表 -->
+          <div style="margin-top: 24px;">
+            <a href="list.html" class="btn btn-default">← 返回列表</a>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <!-- 转换弹窗 -->
+  <div class="modal-overlay" id="convertModal" style="display: none;">
+    <div class="modal" style="max-width: 600px;">
+      <div class="modal-header">
+        <h3 class="modal-title">线索转换</h3>
+        <button class="modal-close" onclick="closeConvertModal()">×</button>
+      </div>
+      <div class="modal-body">
+        <div class="form-group">
+          <label class="form-label" style="font-weight: 600;">转换目标</label>
+          <div style="padding: 12px; background: #FAFAFA; border-radius: 4px;">
+            <label style="display: flex; align-items: center; gap: 8px; margin-bottom: 12px; cursor: not-allowed; opacity: 0.6;">
+              <input type="checkbox" checked disabled>
+              <span>转为客户（必选）</span>
+            </label>
+            <label style="display: flex; align-items: center; gap: 8px; margin-bottom: 12px;">
+              <input type="checkbox" id="convertToContact">
+              <span>转为联系人</span>
+            </label>
+            <label style="display: flex; align-items: center; gap: 8px;">
+              <input type="checkbox" id="convertToOpportunity">
+              <span>转为商机</span>
+            </label>
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="form-label" style="font-weight: 600;">原线索处理</label>
+          <div style="padding: 12px; background: #FAFAFA; border-radius: 4px;">
+            <label style="display: flex; align-items: center; gap: 8px; margin-bottom: 12px;">
+              <input type="radio" name="keepLead" value="keep" checked>
+              <span>保留线索（状态变更为"已转换"）</span>
+            </label>
+            <label style="display: flex; align-items: center; gap: 8px;">
+              <input type="radio" name="keepLead" value="delete">
+              <span>删除线索</span>
+            </label>
+          </div>
+        </div>
+        <div class="message message-success" style="margin-top: 16px;">
+          ✓ 数据将自动映射：姓名→客户名，公司→客户公司，联系方式→客户联系方式
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-default" onclick="closeConvertModal()">取消</button>
+        <button class="btn btn-primary" onclick="confirmConvert()">确认转换</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="../assets/js/main.js"></script>
+  <script>
+    // 获取 URL 参数
+    const params = getUrlParams();
+    const leadId = params.id || '1';
+
+    // 处理转换
+    function handleConvert() {
+      document.getElementById('convertModal').style.display = 'flex';
+    }
+
+    function closeConvertModal() {
+      document.getElementById('convertModal').style.display = 'none';
+    }
+
+    function confirmConvert() {
+      const convertToContact = document.getElementById('convertToContact').checked;
+      const convertToOpportunity = document.getElementById('convertToOpportunity').checked;
+      const keepLead = document.querySelector('input[name="keepLead"]:checked').value;
+
+      const results = ['已创建客户'];
+      if (convertToContact) results.push('已创建联系人');
+      if (convertToOpportunity) results.push('已创建商机');
+
+      showMessage(`转换成功！${results.join('，')}`);
+      closeConvertModal();
+
+      // 延迟跳转到列表页
+      setTimeout(() => {
+        window.location.href = 'list.html';
+      }, 1500);
+    }
+
+    // 处理复制
+    function handleCopy() {
+      showMessage('已复制线索信息到剪贴板');
+    }
+
+    // 处理删除
+    function handleDelete() {
+      if (confirm('确定要删除此线索吗？\n\n姓名：张伟\n公司：北京科技有限公司\n\n此操作可以恢复。')) {
+        showMessage('线索已删除');
+        setTimeout(() => {
+          window.location.href = 'list.html';
+        }, 1000);
+      }
+    }
+  </script>
+</body>
+</html>
