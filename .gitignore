@@ -32,3 +32,6 @@ npm-debug.log*
 .tmp/
 temp/
 *.tmp
+
+# Claudian sessions (may contain sensitive data)
+.claudian/sessions/
