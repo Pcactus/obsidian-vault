@@ -1,0 +1,92 @@
+{
+  "userName": "",
+  "permissionMode": "yolo",
+  "model": "qwen3.5-plus",
+  "thinkingBudget": "high",
+  "effortLevel": "high",
+  "serviceTier": "default",
+  "enableAutoTitleGeneration": true,
+  "titleGenerationModel": "",
+  "excludedTags": [],
+  "mediaFolder": "",
+  "systemPrompt": "",
+  "persistentExternalContextPaths": [],
+  "sharedEnvironmentVariables": "",
+  "envSnippets": [
+    {
+      "id": "snippet-1775707204199",
+      "name": "kimi-k2.5",
+      "description": "模型能力：文本生成、深度思考、视觉理解",
+      "envVars": "ANTHROPIC_BASE_URL = https://dashscope.aliyuncs.com/apps/anthropic\nANTHROPIC_API_KEY = sk-8786712ae7324097b31eeb9932c5ca30\nANTHROPIC_MODEL = kimi-k2.5",
+      "scope": "provider:claude"
+    },
+    {
+      "id": "snippet-1775712291546",
+      "name": "qwen3.5-plus",
+      "description": "模型能力：文本生成、深度思考、视觉理解",
+      "envVars": "ANTHROPIC_BASE_URL = https://dashscope.aliyuncs.com/apps/anthropic\nANTHROPIC_API_KEY = sk-8786712ae7324097b31eeb9932c5ca30\nANTHROPIC_MODEL = qwen3.5-plus",
+      "scope": "provider:claude"
+    },
+    {
+      "id": "snippet-1775712848610",
+      "name": "qwen3.5-plus",
+      "description": "文本生成、深度思考、视觉理解",
+      "envVars": "ANTHROPIC_BASE_URL = https://dashscope.aliyuncs.com/apps/anthropic\nANTHROPIC_API_KEY = sk-8786712ae7324097b31eeb9932c5ca30\nANTHROPIC_MODEL = qwen3.5-plus",
+      "scope": "provider:claude"
+    }
+  ],
+  "customContextLimits": {},
+  "keyboardNavigation": {
+    "scrollUpKey": "w",
+    "scrollDownKey": "s",
+    "focusInputKey": "i"
+  },
+  "locale": "zh-CN",
+  "providerConfigs": {
+    "claude": {
+      "safeMode": "acceptEdits",
+      "cliPath": "",
+      "cliPathsByHost": {
+        "VM-0-3-ubuntu": "/home/ubuntu/.nvm/versions/node/v24.14.1/bin/claude"
+      },
+      "loadUserSettings": true,
+      "enableChrome": true,
+      "enableBangBash": false,
+      "enableOpus1M": false,
+      "enableSonnet1M": false,
+      "lastModel": "haiku",
+      "environmentVariables": "ANTHROPIC_BASE_URL = https://dashscope.aliyuncs.com/apps/anthropic\nANTHROPIC_API_KEY = sk-8786712ae7324097b31eeb9932c5ca30\nANTHROPIC_MODEL = qwen3.5-plus",
+      "environmentHash": "ANTHROPIC_BASE_URL=https://dashscope.aliyuncs.com/apps/anthropic|ANTHROPIC_MODEL=qwen3.5-plus"
+    },
+    "codex": {
+      "enabled": false,
+      "safeMode": "workspace-write",
+      "cliPath": "",
+      "cliPathsByHost": {},
+      "reasoningSummary": "detailed",
+      "environmentVariables": "",
+      "environmentHash": "",
+      "installationMethodsByHost": {
+        "VM-0-3-ubuntu": "native-windows"
+      },
+      "wslDistroOverridesByHost": {}
+    }
+  },
+  "settingsProvider": "claude",
+  "savedProviderModel": {
+    "claude": "qwen3.5-plus"
+  },
+  "savedProviderEffort": {
+    "claude": "high"
+  },
+  "savedProviderServiceTier": {},
+  "savedProviderThinkingBudget": {
+    "claude": "high"
+  },
+  "lastCustomModel": "qwen3.5-plus",
+  "maxTabs": 3,
+  "tabBarPosition": "input",
+  "enableAutoScroll": true,
+  "openInMainTab": false,
+  "hiddenProviderCommands": {}
+}
